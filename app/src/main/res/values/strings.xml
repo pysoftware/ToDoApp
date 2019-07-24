@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">To-Do</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="done">Done</string>
+    <string name="enter_task_here">Enter task here…</string>
+    <string name="enter_quick_task_here">Enter quick task here…</string>
+    <string name="active">Active</string>
+    <string name="add_task">Add task</string>
+    <string name="to_do_list">To do list</string>
+</resources>

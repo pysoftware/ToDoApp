@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        tools:context=".ui.fragments.ToDoListFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+            tools:listitem="@layout/todo_item"
+            android:id="@+id/rv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/search_view"/>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_above="@id/search_view"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="16dp"
+            android:id="@+id/addToDo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_alignParentBottom="true"
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue500"
+            android:background="@color/blue500">
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <EditText
+                    android:maxLines="1"
+                    android:id="@+id/et_quick_task"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/white"
+                    android:textColorHint="@color/white"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_quick_task_here"/>
+
+            <TextView
+                    android:visibility="gone"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/tv_add_quick_task"
+                    android:background="@drawable/ic_add"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:src="@drawable/ic_add"/>
+        </LinearLayout>
+
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+</RelativeLayout>

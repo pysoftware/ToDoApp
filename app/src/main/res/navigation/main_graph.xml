@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/main_graph"
+            app:startDestination="@id/toDoListFragment">
+
+    <fragment android:id="@+id/toDoListFragment" android:name="com.magere.to_do.ui.fragments.ToDoListFragment"
+              android:label="fragment_to_do_list" tools:layout="@layout/fragment_to_do_list">
+        <action android:id="@+id/action_toDoListFragment_to_addToDoFragment" app:destination="@id/addToDoFragment"/>
+    </fragment>
+    <fragment android:id="@+id/addToDoFragment" android:name="com.magere.to_do.ui.fragments.AddToDoFragment"
+              android:label="fragment_add_to_do" tools:layout="@layout/fragment_add_to_do"/>
+
+</navigation>
